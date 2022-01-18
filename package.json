@@ -1,0 +1,12 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "OC-Projet 3: Dynamisez une page web avec des animations CSS",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch main.scss:public/css/style.css"
+  },
+  "keywords": [],
+  "author": "Abdulkadir GUVEN <abguven@gmail.com>",
+  "license": "ISC"
+}

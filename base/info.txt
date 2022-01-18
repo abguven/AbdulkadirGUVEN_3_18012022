@@ -1,0 +1,6 @@
+contains boilerplate used throughout an entire site.
+This includes project-wide typography styles, and stylesheets that universally
+"reset" or "normalize" default CSS.
+Example files :  
+_reset.scss    # Reset or normalize
+_typography.scss # typography rules

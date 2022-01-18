@@ -1,0 +1,8 @@
+components are like "mini" layouts.
+Styles for small, reusable pieces of the site should reside here
+"(think buttons, forms, profile pictures, etc.)"
+Example files : 
+_buttons.scss      # Buttons
+_carousel.scss     # Carousel
+_cover.scss        # Cover
+_dropdown.scss     # Dropdown

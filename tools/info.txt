@@ -1,0 +1,4 @@
+In tools or abstracts folder you keep variables, functions, mixins, placeholders etc.
+Example files :  
+_variables.scss    # Sass Variables 
+_mixins.scss       # Sass Mixins

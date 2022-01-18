@@ -1,0 +1,10 @@
+contains styles for different aspects of the site's structural layout
+"(think of areas like nav bars, headers, footers, etc.)"
+You put here your reusable BEM blocks
+Example files : 
+_navigation.scss   # Navigation
+_grid.scss         # Grid system
+_header.scss       # Header
+_footer.scss       # Footer
+_sidebar.scss      # Sidebar
+_forms.scss        # Forms
