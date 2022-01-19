@@ -1,0 +1,15 @@
+@import "./tools/_variables.scss";
+
+// base folder
+@import "./base/minireset";
+@import "./base/typography";
+@import "./base/base";
+
+// tools folder
+@import "./tools/functions";
+@import "./tools/mixins";
+
+// layout folder
+@import "./layout/header";
+@import "./layout/footer";
+

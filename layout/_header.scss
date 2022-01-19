@@ -1,0 +1,35 @@
+$fz-logo: 2.5rem; // logo text size
+$fz-back-button: 1.5rem;
+$padding-header : 1rem;
+
+$width-back-button: $fz-back-button *2; 
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    padding: $padding-header;
+    &__logo{
+        display: inline-block;
+        text-align: center;
+        font-size: $fz-logo;
+        width: 100%;
+        padding-right: $width-back-button;
+        //border: 1px solid red;
+    }
+    &__back-button{
+        display: inline-block;
+        width: $width-back-button;
+        text-align: center;
+        font-size: $fz-back-button;
+        padding-top: ($fz-back-button) / 2; // center vertically
+        //border: 1px solid blue;
+        &--hidden{
+            visibility: hidden;
+        }
+        i{
+            vertical-align: text-bottom;
+        }
+    }    
+}
+
+
