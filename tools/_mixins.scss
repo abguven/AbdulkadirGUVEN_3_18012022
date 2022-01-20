@@ -1,3 +1,23 @@
-@mixin btn {
-    color: white;
+@mixin shadow($color: black, $alpha:0.2){
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba($color: $color, $alpha: $alpha);
+}
+
+@mixin button-gradient-background{
+    background: $cc-primary;
+    background: linear-gradient(356deg, $cc-primary 5%, $cc-secondary 85%); 
+}
+
+@mixin gradient-button($text-color:white){
+    display: inline-block;
+    $pv-button: calc($fz-default * 0.9); // vertical padding
+    $ph-button: calc($fz-default * 1.5); // horizontal padding
+    padding: $pv-button $ph-button;
+    color: $text-color;
+    border-radius: 10rem;
+    @include button-gradient-background;
+    @include shadow;
+    transition: transform ease-out 200ms;
+    &:hover{
+        transform: scale(1.03);
+    }
 }

@@ -7,10 +7,16 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    font-size: $fz-default;
 }
 
 .header__logo{
     font-family: 'Shrikhand', cursive;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 800;
 }
 
 

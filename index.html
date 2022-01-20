@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,43 @@
     <link rel="stylesheet" href="public/css/style.css">
     <title>Oh My Food - Commandez vos repas préférés en ligne sans attente</title>
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
         <header class="header">
             <a href="index.html" class="header__back-button header__back-button--hidden">
-                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-left" aria-hidden="true"></i>
             </a>
             <a href="index.html" class="header__logo">
                 ohmyfood
             </a>
         </header>
-     
-    </div>  <!-- div.container -->  
+        <!-- Search Form -->
+        <section class="search">
+            <form class="search__form" action="#">
+                <div class="search__box">
+                    <a class="search__box__icon" href="#">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    </a>
+                    <input class="search__box__input" 
+                        type="search"
+                        placeholder="Paris, Belleville">
+                </div>
+              
+                <h1 class="search__title">Réservez le menu qui vous convient</h1>
+                <p class="search__caption">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+                <a class="search__btn" href="#">Explorer nos restaurants</a>
+
+            </form>
+        </section>
+
+
+
+
+
+
+    </div> <!-- div.container -->
 </body>
+
 </html>
