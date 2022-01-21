@@ -21,7 +21,7 @@ $width-back-button: $fz-back-button *2;
         width: $width-back-button;
         text-align: center;
         font-size: $fz-back-button;
-        padding-top: ($fz-back-button) / 2; // center vertically
+        padding-top: calc(($fz-back-button) / 2); // center vertically
         //border: 1px solid blue;
         &--hidden{
             visibility: hidden;

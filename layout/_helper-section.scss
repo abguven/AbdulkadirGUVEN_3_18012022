@@ -1,0 +1,51 @@
+$sz-item-order: 2rem;
+$cc-icon: #7e7e7e;
+$fz-icon: 2rem;
+
+.helper{
+    $self: &;
+    padding: $pad-default;
+    &__item{
+        display: flex;
+        position: relative;
+        background-color: $cc-secondary-background;
+        border-radius: $br-item;
+        padding: $pad-default;
+        margin: $mg-default;
+        @include shadow;
+        &:hover{
+            background-color: rgba($cc-primary, 0.2);
+        }    
+        &:hover > #{$self}__icon{
+            color: $cc-primary;
+        }    
+    }   
+    &__item-order{
+        position: absolute;
+        left: calc($sz-item-order/-2);
+        // vertical centering
+        top: calc(calc($pad-default * 2 + $fz-icon) / 2) - calc($sz-item-order/2);
+        padding-left: 0.6rem;
+        padding-top: 0.3rem;
+        font-size: 80%;
+        color: white;
+        width: $sz-item-order;
+        height: $sz-item-order;
+        background-color: $cc-primary;
+        border-radius: 50%;
+    }
+    &__icon{
+        margin-left: $mg-default;
+        color: $cc-icon;        
+        font-size: $fz-icon;
+        .fas{
+            vertical-align: top;
+        }
+    }
+    &__caption{
+        font-weight: bold;
+        margin-left: $mg-default;
+    }
+ 
+}
+
