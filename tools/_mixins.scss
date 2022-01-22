@@ -2,7 +2,8 @@
     box-shadow: 0.5rem 0.5rem 0.5rem rgba($color: $color, $alpha: $alpha);
 }
 
-@mixin button-gradient-background{
+
+@mixin gradient-background{
     background: $cc-primary;
     background: linear-gradient(356deg, $cc-primary 5%, $cc-secondary 85%); 
 }
@@ -14,10 +15,46 @@
     padding: $pv-button $ph-button;
     color: $text-color;
     border-radius: 10rem;
-    @include button-gradient-background;
+    @include gradient-background;
     @include shadow;
     transition: transform ease-out 200ms;
     &:hover{
         transform: scale(1.03);
     }
+}
+
+@mixin card-image($border-radius: 0){
+    border-radius: $border-radius;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin like-btn{
+    font-weight: 400;
+    &:hover{
+        background: linear-gradient(0deg, $cc-secondary 15%, $cc-primary 95%);
+        background-clip: text;
+        color: transparent;
+        font-weight: 501; // > 500 to fill the heart
+    }    
+}
+
+
+@mixin new-tag($margin:1rem) {
+    display: block;
+    position: absolute;
+    content: "Nouveau";
+    padding: 0.7rem 1.3rem;
+    right: $margin;
+    top: $margin;
+    font-size: 80%;
+    font-weight: 600;
+    color: darken($color: $cc-tertiary, $amount: 40);
+    background-color: $cc-tertiary; 
+    @include shadow($alpha:0.5);   
 }

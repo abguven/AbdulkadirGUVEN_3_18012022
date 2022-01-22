@@ -1,0 +1,50 @@
+$cc-hover: darken($cc-primary,15%);
+
+.restos{
+    padding: $pad-section;
+    background: $cc-secondary-background;
+}
+
+.restocard{
+    $self: &;
+    margin-bottom: $mg-default; 
+    display: block;
+    border-radius: $br-card;
+    @include shadow;   
+    &:hover{
+        color: $cc-hover;
+        border-color: $cc-hover;
+        box-shadow: 0 0 1rem $cc-hover;
+    }
+    &__img{
+        @include card-image($br-card $br-card 0 0);
+    }
+
+    &__img-container{
+        position: relative;
+        height: $sz-image-height;
+        &--new{
+            &::after{
+                @include new-tag($margin:$pad-box);
+            }
+        }
+    }
+    &__body{
+        display: flex;
+        border-radius: 0 0 $br-card $br-card;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+        padding: $pv-box $ph-box;
+    }
+    &__title{
+        margin: 0.5rem 0;
+    }
+    &__caption{
+        margin: 0.5rem 0;
+    }
+    &__like-btn{
+        @include like-btn;
+    }
+
+} // .restocard

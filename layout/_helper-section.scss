@@ -4,17 +4,17 @@ $fz-icon: 2rem;
 
 .helper{
     $self: &;
-    padding: $pad-default;
+    padding: $pad-section;
     &__item{
         display: flex;
         position: relative;
         background-color: $cc-secondary-background;
         border-radius: $br-item;
-        padding: $pad-default;
+        padding: $pad-box;
         margin: $mg-default;
         @include shadow;
         &:hover{
-            background-color: rgba($cc-primary, 0.2);
+            background-color: rgba($cc-primary, $transparency);
         }    
         &:hover > #{$self}__icon{
             color: $cc-primary;
@@ -24,7 +24,7 @@ $fz-icon: 2rem;
         position: absolute;
         left: calc($sz-item-order/-2);
         // vertical centering
-        top: calc(calc($pad-default * 2 + $fz-icon) / 2) - calc($sz-item-order/2);
+        top: calc(calc($pad-box * 2 + $fz-icon) / 2) - calc($sz-item-order/2);
         padding-left: 0.6rem;
         padding-top: 0.3rem;
         font-size: 80%;
