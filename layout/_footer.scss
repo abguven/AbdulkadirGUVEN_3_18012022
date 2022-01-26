@@ -1,0 +1,30 @@
+$fz-footer-title: 120%;
+$fz-footer-caption: 90%;
+
+.footer{
+    background: $cc-footer-background;
+    padding: $pad-section;
+    *{
+        color: $cc-footer-text;
+    }
+    &__title{
+        font-size: $fz-footer-title; 
+        font-weight: 100;  
+        margin-top: 0;     
+    }
+    &__list{
+        list-style: none;
+        padding-left: 0;
+        margin: 0 auto;
+        font-size: $fz-footer-caption;
+    }
+    &__link{
+        display: block;
+        margin-top: 0.4rem;      
+    }
+    &__icon{
+        width: 2.5rem;
+    }
+ 
+
+}
