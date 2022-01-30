@@ -9,6 +9,8 @@
 // tools folder
 @import "./tools/functions";
 @import "./tools/mixins";
+@import "./tools/extensions";
+@import "./tools/keyframes";
 
 // components folder
 @import "./components/buttons";
@@ -20,6 +22,11 @@
 @import "./layout/helper-section";
 @import "./layout/restos.scss";
 @import "./layout/footer";
+
+// pages folder
+@import "./pages/home";
+@import "./pages/menu";
+
 
 
 

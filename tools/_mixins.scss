@@ -15,6 +15,8 @@
     padding: $pv-button $ph-button;
     color: $text-color;
     border-radius: 10rem;
+    border: none;
+    outline: none;
     @include gradient-background;
     @include shadow;
     transition: transform ease-out 200ms;
@@ -54,7 +56,16 @@
     top: $margin;
     font-size: 80%;
     font-weight: 600;
-    color: darken($color: $cc-tertiary, $amount: 40);
+    color: darker-tertiary-color(40);
     background-color: $cc-tertiary; 
     @include shadow($alpha:0.5);   
+}
+
+@mixin underline($color:$cc-tertiary, $width:4rem,$thickness:3px){
+    &::after{
+        display: block;
+        content: "";
+        border-bottom: $thickness solid $color;
+        width: $width;
+    }
 }

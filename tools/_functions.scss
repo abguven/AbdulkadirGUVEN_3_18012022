@@ -1,0 +1,3 @@
+@function darker-tertiary-color($percent){
+    @return darken($cc-tertiary,$percent);
+}

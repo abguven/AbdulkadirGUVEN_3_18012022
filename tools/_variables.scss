@@ -12,6 +12,7 @@ $cc-footer-text: white;
 
 
 // default padding and margin values
+// paddings
 $pv-default: 0rem;
 $ph-default: 1.5rem;
 $pad-section: 1.5rem;
@@ -20,7 +21,12 @@ $pad-box: 1.3rem;
 $pv-box: 0.5rem;
 $ph-box: 1.4rem;
 
+// margins
 $mg-default: 2rem;
+// Common margin used for texts in the body
+$mg-body-text: 0.5rem 0;
+$mv-body-text: 0.5rem;
+
 
 // Border radius
 $br-item: 1.5rem; 
@@ -29,9 +35,7 @@ $br-card: 1.3rem;
 // Default transparency level
 $transparency: 0.2;
 
-// Font sizes
-$fz-default : 1.6rem;
 
 // Card Image
-$sz-image-height: 15rem;
+$sz-default-image-height: 15rem;
 

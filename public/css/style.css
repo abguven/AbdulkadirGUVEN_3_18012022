@@ -345,7 +345,7 @@ body {
   font-size: 1.6rem;
 }
 
-.header__logo, .footer__title {
+.header__logo, .footer__title, .menu-card__title {
   font-family: "Shrikhand", cursive;
 }
 
@@ -355,6 +355,14 @@ h1 {
 
 h2 {
   font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.6rem;
 }
 
 *,
@@ -376,17 +384,34 @@ a {
   color: black;
 }
 
-.search__btn {
+.menu-item__caption, .menu-item__title, .restocard__caption, .restocard__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0) translateX(0rem);
+  }
+  to {
+    transform: rotate(1turn) translateX(0rem);
+  }
+}
+.search__btn, .order-btn {
   display: inline-block;
   padding: 1.44rem 2.4rem;
   color: white;
   border-radius: 10rem;
+  border: none;
+  outline: none;
   background: #9356DC;
   background: linear-gradient(356deg, #9356DC 5%, #FF79DA 85%);
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
   transition: transform ease-out 200ms;
 }
-.search__btn:hover {
+.search__btn:hover, .order-btn:hover {
   transform: scale(1.03);
 }
 
@@ -570,12 +595,6 @@ a {
   align-items: center;
   padding: 0.5rem 1.4rem;
 }
-.restocard__title {
-  margin: 0.5rem 0;
-}
-.restocard__caption {
-  margin: 0.5rem 0;
-}
 .restocard__like-btn {
   font-weight: 400;
 }
@@ -609,6 +628,113 @@ a {
 }
 .footer__icon {
   width: 2.5rem;
+}
+
+.menu-card__img-container {
+  position: relative;
+  height: 22.5rem;
+  z-index: -1;
+  margin-bottom: -3rem;
+}
+.menu-card__img {
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu-card__body {
+  border-radius: 3rem 3rem 0 0;
+  overflow: hidden;
+  padding: 1.5rem;
+  background: #f6f6f6;
+}
+.menu-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-card__title {
+  font-size: 2rem;
+}
+.menu-card__like-btn {
+  font-weight: 400;
+}
+.menu-card__like-btn:hover {
+  background: linear-gradient(0deg, #FF79DA 15%, #9356DC 95%);
+  background-clip: text;
+  color: transparent;
+  font-weight: 501;
+}
+.menu-card__course-title {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.menu-card__course-title::after {
+  display: block;
+  content: "";
+  border-bottom: 3px solid #99E2D0;
+  width: 4rem;
+}
+.menu-card__btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.7rem;
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+.menu-item__description {
+  margin: 1.3rem;
+  min-width: 60%;
+  max-width: 70%;
+}
+.menu-item__caption {
+  font-size: 85%;
+}
+.menu-item__price {
+  align-self: flex-end;
+  margin: 0 0 1.3rem 0;
+  min-width: 10%;
+  max-width: 20%;
+  text-align: left;
+  font-size: 85%;
+  font-weight: 450;
+}
+.menu-item:hover > .menu-item__checked {
+  margin: 0;
+}
+.menu-item:hover > .menu-item__checked .menu-item__icon {
+  animation: rotate-360 linear 400ms;
+}
+.menu-item__checked {
+  display: flex;
+  transition: margin 400ms;
+  justify-content: center;
+  align-items: center;
+  font-size: 150%;
+  flex-shrink: 0;
+  margin-right: -5.36rem;
+  width: 5.36rem;
+  height: 6.7rem;
+  background: #99E2D0;
+  overflow: hidden;
+}
+.menu-item__icon {
+  font-weight: 501;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

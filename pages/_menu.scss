@@ -1,0 +1,110 @@
+$sz-vertical-offset: 3rem;
+$fz-menu-header : 2rem;
+$br-menu-body: 3rem;
+
+
+.menu-card{ 
+    &__img-container{
+        position: relative;
+        height: $sz-default-image-height*1.5;
+        z-index: -1;
+        margin-bottom: -$sz-vertical-offset;
+    }
+    &__img{
+        @include card-image;
+    }   
+    &__body{
+        border-radius: $br-menu-body $br-menu-body 0 0;
+        overflow: hidden;
+        padding: $pad-section;
+        background: $cc-secondary-background;
+    }
+    
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        font-size: $fz-menu-header;
+    }
+    &__like-btn{
+        @include like-btn;
+    }
+    &__course-title{
+        font-weight: normal;
+        text-transform: uppercase;
+        @include underline;
+    }
+    &__btn-container{
+        display: flex;
+        justify-content: center;
+        padding: $pad-section;
+    }
+
+}
+
+$sz-height-menu-item :($fz-default-box-title*2) + (4*$mv-body-text) + $pad-box; 
+$tm-menu-item : 400ms; //transition time 
+
+.menu-item{
+    $self: &;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $sz-height-menu-item;
+    background: white;
+    border-radius: $br-item;
+    overflow: hidden;
+    margin-bottom: $mg-default;
+    @include shadow;
+    &__description{
+        // Use of margin instead of padding. If we us padding check icon doesn't fill correctly
+        margin: $pad-box;
+        min-width: 60%;
+        max-width: 70%;
+    }
+    &__title{
+        @extend %text-content; 
+    }
+    &__caption{
+        @extend %text-content;
+        font-size: $fz-menu-item-text;
+    }
+    &__price{
+        align-self: flex-end;        
+        margin: 0 0 $pad-box 0;
+        min-width: 10%;
+        max-width: 20%;
+        text-align: left;
+        font-size: $fz-menu-item-text;
+        font-weight: 450;
+    }
+    &:hover > #{$self}__checked{
+        margin: 0;
+        #{$self}__icon{
+            animation: rotate-360 linear $tm-menu-item;
+        }                 
+    }
+
+    &__checked{
+        $sz-width:$sz-height-menu-item * 0.8; 
+        display: flex;
+        transition: margin $tm-menu-item;
+        justify-content: center;
+        align-items: center;
+        font-size: 150%;
+        flex-shrink: 0; 
+        margin-right: -1 * $sz-width;        
+        width: $sz-width;
+        height: $sz-height-menu-item;        
+        background: $cc-tertiary; 
+        overflow: hidden; 
+    }
+    &__icon{
+        font-weight: 501;
+        color: white;        
+    }
+
+}
+

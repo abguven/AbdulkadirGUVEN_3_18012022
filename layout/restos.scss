@@ -22,7 +22,7 @@ $cc-hover: darken($cc-primary,15%);
 
     &__img-container{
         position: relative;
-        height: $sz-image-height;
+        height: $sz-default-image-height;
         &--new{
             &::after{
                 @include new-tag($margin:$pad-box);
@@ -38,10 +38,10 @@ $cc-hover: darken($cc-primary,15%);
         padding: $pv-box $ph-box;
     }
     &__title{
-        margin: 0.5rem 0;
+        @extend %text-content;
     }
     &__caption{
-        margin: 0.5rem 0;
+        @extend %text-content;
     }
     &__like-btn{
         @include like-btn;

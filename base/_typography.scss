@@ -4,22 +4,41 @@
 /* Font awesome CDN */
 @import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
 
+// Font sizes
+$fz-h1: 2.5rem;
+$fz-h2: 1.7rem;
+$fz-h3: 1.6rem;
+
+$fz-default : 1.6rem;
 
 body{
     font-family: 'Roboto', sans-serif;
     font-size: $fz-default;
 }
 
-.header__logo, .footer__title{
+.header__logo, .footer__title, .menu-card__title{
     font-family: 'Shrikhand', cursive;
 }
 
+
 h1{
-    font-size: 2.5rem;
+    font-size: $fz-h1;
 }
 
 h2{
-    font-size: 1.7rem;
+    font-size: $fz-h2;
 }
 
+h3{
+    font-size: $fz-h3;
+}
 
+p{
+    font-size: $fz-default;
+}
+
+$fz-default-box-title: $fz-h2;
+$fz-default-box-caption : $fz-default;
+
+// Menu item
+$fz-menu-item-text: 85%;
