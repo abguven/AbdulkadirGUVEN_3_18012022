@@ -1,3 +1,7 @@
-.search__btn,.order-btn{
+.search__btn{
     @include gradient-button;
+}
+
+.order-btn{
+    @include gradient-button($width-multiplier:3);
 }
