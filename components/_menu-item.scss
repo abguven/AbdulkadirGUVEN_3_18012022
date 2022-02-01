@@ -1,5 +1,8 @@
 $sz-height-menu-item :($fz-default-box-title*2) + (4*$mv-body-text) + $pad-box; 
-$tm-menu-item : 400ms; //transition time 
+$tm-menu-item-hover : 400ms; //transition time 
+$tm-menu-item-fadein: 250ms;
+$tm-menu-item-delay: calc($tm-menu-item-fadein / 1.6);
+$menu-item-count: 3; // Necessary for menu-item fade in animation
 
 .menu-item{
     $self: &;
@@ -11,6 +14,7 @@ $tm-menu-item : 400ms; //transition time
     border-radius: $br-item;
     overflow: hidden;
     margin-bottom: $mg-default;
+    animation: fadein ease-in-out $tm-menu-item-fadein backwards;
     @include shadow;
     &__text-container{
         display: flex;
@@ -45,14 +49,13 @@ $tm-menu-item : 400ms; //transition time
     &:hover > #{$self}__checked{
         margin: 0;
         #{$self}__icon{
-            animation: rotate-360 linear $tm-menu-item;
+            animation: rotate-360 linear $tm-menu-item-hover;
         }                 
     }
 
     &__checked{
         $sz-width:$sz-height-menu-item * 0.8; 
         display: flex;
-        transition: margin $tm-menu-item;
         justify-content: center;
         align-items: center;
         font-size: 150%;
@@ -62,10 +65,18 @@ $tm-menu-item : 400ms; //transition time
         height: $sz-height-menu-item;        
         background: $cc-tertiary; 
         overflow: hidden; 
+        transition: margin $tm-menu-item-hover;
     }
     &__icon{
         font-weight: 501;
         color: white;        
+    }
+    
+    // Fade in animation on menu items
+    @for $i from 1 through $menu-item-count{
+        &:nth-of-type(#{$i}){
+            animation-delay: $i*$tm-menu-item-delay;
+        }            
     }
 
 }
