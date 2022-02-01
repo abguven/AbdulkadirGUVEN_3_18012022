@@ -399,7 +399,7 @@ a {
     transform: rotate(1turn) translateX(0rem);
   }
 }
-.search__btn, .order-btn {
+.search__btn {
   display: inline-block;
   padding: 1.44rem 2.4rem;
   color: white;
@@ -411,7 +411,23 @@ a {
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
   transition: transform ease-out 200ms;
 }
-.search__btn:hover, .order-btn:hover {
+.search__btn:hover {
+  transform: scale(1.03);
+}
+
+.order-btn {
+  display: inline-block;
+  padding: 1.44rem 7.2rem;
+  color: white;
+  border-radius: 10rem;
+  border: none;
+  outline: none;
+  background: #9356DC;
+  background: linear-gradient(356deg, #9356DC 5%, #FF79DA 85%);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  transition: transform ease-out 200ms;
+}
+.order-btn:hover {
   transform: scale(1.03);
 }
 
@@ -696,19 +712,27 @@ a {
   margin-bottom: 2rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
+.menu-item__text-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 80%;
+}
 .menu-item__description {
   margin: 1.3rem;
-  min-width: 60%;
-  max-width: 70%;
+  max-width: 79%;
+}
+.menu-item__title {
+  margin-top: 0;
 }
 .menu-item__caption {
   font-size: 85%;
+  margin-bottom: 0;
 }
 .menu-item__price {
   align-self: flex-end;
-  margin: 0 0 1.3rem 0;
-  min-width: 10%;
-  max-width: 20%;
+  margin: 0 1.3rem 1.3rem 0;
+  max-width: 19%;
   text-align: left;
   font-size: 85%;
   font-weight: 450;
