@@ -1,0 +1,72 @@
+$sz-height-menu-item :($fz-default-box-title*2) + (4*$mv-body-text) + $pad-box; 
+$tm-menu-item : 400ms; //transition time 
+
+.menu-item{
+    $self: &;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $sz-height-menu-item;
+    background: white;
+    border-radius: $br-item;
+    overflow: hidden;
+    margin-bottom: $mg-default;
+    @include shadow;
+    &__text-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 80%;
+    }
+    &__description{
+        // Use of margin instead of padding. If we us padding check icon doesn't fill correctly
+        margin: $pad-box;
+        max-width: 79%;
+        //border: 1px solid #000;
+    }
+    &__title{
+        @extend %text-content;
+        margin-top: 0; 
+    }
+    &__caption{
+        @extend %text-content;
+        font-size: $fz-menu-item-text;
+        margin-bottom: 0;
+    }
+    &__price{
+        align-self: flex-end;        
+        margin: 0 $pad-box $pad-box 0;
+        max-width: 19%;
+        text-align: left;
+        font-size: $fz-menu-item-text;
+        font-weight: 450;
+        //border: 1px solid #000;
+    }
+    &:hover > #{$self}__checked{
+        margin: 0;
+        #{$self}__icon{
+            animation: rotate-360 linear $tm-menu-item;
+        }                 
+    }
+
+    &__checked{
+        $sz-width:$sz-height-menu-item * 0.8; 
+        display: flex;
+        transition: margin $tm-menu-item;
+        justify-content: center;
+        align-items: center;
+        font-size: 150%;
+        flex-shrink: 0; 
+        margin-right: -1 * $sz-width;        
+        width: $sz-width;
+        height: $sz-height-menu-item;        
+        background: $cc-tertiary; 
+        overflow: hidden; 
+    }
+    &__icon{
+        font-weight: 501;
+        color: white;        
+    }
+
+}
+
