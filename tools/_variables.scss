@@ -39,3 +39,24 @@ $transparency: 0.2;
 // Card Image
 $sz-default-image-height: 15rem;
 
+
+// Spinner
+
+$cc-spinner-text: lighten($cc-text-color,15);
+
+// Color list used for spinner circles
+$lst-spinner-circle-colors:
+        $cc-primary-background,$cc-secondary,
+        $cc-primary, $cc-primary-background,
+        darken($cc-tertiary,10),$cc-primary-background;
+
+$nm-arc-count: 6; //  If exceed 6 update color list!! 
+$sz-spinner: 25vh;
+$bd-spinner-min: 1px;
+$bd-spinner-max: 5px;
+$tm-spinner: 1.1s;
+$tm-spinner-text: 600ms;
+$tm-fade: 1.8s;
+// How many arcs allowed in each level. You should not exceed 4!!!
+$max-arc-number: 2; 
+$sz-spinner-space-between: calc($sz-spinner*0.05);

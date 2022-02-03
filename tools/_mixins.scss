@@ -69,3 +69,25 @@
         width: $width;
     }
 }
+//spinner
+
+@mixin spinner-arc($index, $colors){
+    $level: ceil(calc($index/$max-arc-number))-1;
+    $delay: calc($tm-spinner/10)*$level;
+    $side: get-arc-side($index); // returns "top" "right" "bottom" or "left"
+    border-#{$side}-color: nth($colors,$index);    
+
+    @if $level > 0 {
+        animation: kf-spinner-thin $tm-spinner $delay linear infinite both;
+        left: $sz-spinner-space-between*$level;
+        top: $sz-spinner-space-between*$level;
+        $size : 100% - $level*10;
+        width: $size;
+        height: $size;    
+        @if $level > 1 {
+            border-width: calc($bd-spinner-max/2);
+        }
+    }@else{
+        animation: kf-spinner-thick $tm-spinner $delay linear infinite both;
+    }
+}
