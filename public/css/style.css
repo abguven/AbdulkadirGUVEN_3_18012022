@@ -890,11 +890,21 @@ a {
 .restocard__like-btn {
   font-weight: 400;
 }
-.restocard__like-btn:hover {
-  background: linear-gradient(0deg, #FF79DA 15%, #9356DC 95%);
-  background-clip: text;
-  color: transparent;
-  font-weight: 501;
+@media screen and (min-width: 992px) {
+  .restocard__like-btn:hover {
+    background: linear-gradient(0deg, #FF79DA 15%, #9356DC 95%);
+    background-clip: text;
+    color: transparent;
+    font-weight: 501;
+  }
+}
+@media screen and (max-width: 768px) {
+  .restocard__like-btn:active {
+    background: linear-gradient(0deg, #FF79DA 15%, #9356DC 95%);
+    background-clip: text;
+    color: transparent;
+    font-weight: 501;
+  }
 }
 
 .footer {
@@ -955,11 +965,21 @@ a {
 .menu-card__like-btn {
   font-weight: 400;
 }
-.menu-card__like-btn:hover {
-  background: linear-gradient(0deg, #FF79DA 15%, #9356DC 95%);
-  background-clip: text;
-  color: transparent;
-  font-weight: 501;
+@media screen and (min-width: 992px) {
+  .menu-card__like-btn:hover {
+    background: linear-gradient(0deg, #FF79DA 15%, #9356DC 95%);
+    background-clip: text;
+    color: transparent;
+    font-weight: 501;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-card__like-btn:active {
+    background: linear-gradient(0deg, #FF79DA 15%, #9356DC 95%);
+    background-clip: text;
+    color: transparent;
+    font-weight: 501;
+  }
 }
 .menu-card__course-title {
   font-weight: normal;

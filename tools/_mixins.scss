@@ -2,6 +2,12 @@
     box-shadow: 0.5rem 0.5rem 0.5rem rgba($color: $color, $alpha: $alpha);
 }
 
+@mixin heart-fill{
+    background: linear-gradient(0deg, $cc-secondary 15%, $cc-primary 95%);
+    background-clip: text;
+    color: transparent;
+    font-weight: 501; // > 500 to fill the heart  
+}
 
 @mixin gradient-background($from-color:$cc-primary, $to-color:$cc-secondary){
     background: linear-gradient(356deg, $from-color 5%, $to-color 85%); 
@@ -56,10 +62,14 @@
 @mixin like-btn{
     font-weight: 400;
     &:hover{
-        background: linear-gradient(0deg, $cc-secondary 15%, $cc-primary 95%);
-        background-clip: text;
-        color: transparent;
-        font-weight: 501; // > 500 to fill the heart
+        @include desktop{
+            @include heart-fill();
+        }
+    }
+    &:active{
+        @include mobile-only{
+            @include heart-fill();
+        }
     }    
 }
 
