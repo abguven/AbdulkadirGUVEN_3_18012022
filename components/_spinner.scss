@@ -1,5 +1,6 @@
 
 .homepage-container{
+    z-index: 0;
     animation: kf-homepage-fade-in ease-in $tm-fade;
 }
 
@@ -7,11 +8,12 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: 99;
+    z-index: -1;
+    animation: kf-spinner-fade-out cubic-bezier(.95,.05,.8,.04) $tm-fade both;
 }
 
 .spinner{
-    animation: kf-spinner-fade-out cubic-bezier(.95,.05,.8,.04) $tm-fade both;
+    
     border-radius: 50%;
     margin: auto;
     top: 50vh - calc($sz-spinner/2);

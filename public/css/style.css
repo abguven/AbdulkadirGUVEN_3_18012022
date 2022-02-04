@@ -485,11 +485,13 @@ a {
   }
 }
 @keyframes kf-spinner-fade-out {
-  from {
+  0% {
     opacity: 1;
+    z-index: 99;
   }
-  to {
+  100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 .search__btn {
@@ -623,6 +625,7 @@ a {
 }
 
 .homepage-container {
+  z-index: 0;
   animation: kf-homepage-fade-in ease-in 1.8s;
 }
 
@@ -630,11 +633,11 @@ a {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 99;
+  z-index: -1;
+  animation: kf-spinner-fade-out cubic-bezier(0.95, 0.05, 0.8, 0.04) 1.8s both;
 }
 
 .spinner {
-  animation: kf-spinner-fade-out cubic-bezier(0.95, 0.05, 0.8, 0.04) 1.8s both;
   border-radius: 50%;
   margin: auto;
   top: 37.5vh;
