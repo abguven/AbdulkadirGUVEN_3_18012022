@@ -3,9 +3,8 @@
 }
 
 
-@mixin gradient-background{
-    background: $cc-primary;
-    background: linear-gradient(356deg, $cc-primary 5%, $cc-secondary 85%); 
+@mixin gradient-background($from-color:$cc-primary, $to-color:$cc-secondary){
+    background: linear-gradient(356deg, $from-color 5%, $to-color 85%); 
 }
 
 @mixin gradient-button($text-color:white,$width-multiplier:1){
@@ -14,14 +13,32 @@
     $ph-button: calc($fz-default * 1.5 * $width-multiplier); // horizontal padding
     padding: $pv-button $ph-button;
     color: $text-color;
-    border-radius: 10rem;
+    border-radius: $br-button;
     border: none;
     outline: none;
+    position: relative;
+    z-index: 1;
     @include gradient-background;
-    @include shadow;
-    transition: transform ease-out 200ms;
+    @include shadow($alpha:$op-button-shadow-default);    
     &:hover{
-        transform: scale(1.03);
+        &::after{
+            opacity: 1;
+        }  
+    }
+    // Used as hover effect
+    &::after{
+        content: "";
+        position: absolute;
+        left:0;right:0;top:0;bottom:0;
+        z-index: -1;
+        border-radius: $br-button;
+        @include gradient-background(
+            lighten($cc-primary,$button-lighten-on-hover),
+            lighten($cc-secondary,$button-lighten-on-hover));
+        // There is also a shadow on button, we duplicate the shadow to darken it
+        @include shadow($alpha: $op-button-shadow-default);
+        opacity: 0;
+        transition: opacity ease $tm-button-hover;
     }
 }
 
