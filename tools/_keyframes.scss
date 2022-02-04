@@ -63,13 +63,11 @@
 }
 
 @keyframes kf-text-slider{
-    $sz-text-start: -60vw;
     0%{
-        transform: translateX($sz-text-start) scaleX(0.80);
+        transform: translateX(-60vw) scaleX(0.80);
         opacity: 0;
     }
     50%{
-        //transform: scale(0.7);
         opacity:1;
     }
 
@@ -93,9 +91,16 @@
     }  
 }
 
-@keyframes kf-body-fade-in {
-    from{transform: translateX(-9999px);opacity: 0;}
-    to{transform: translateX(0);}
+@keyframes kf-homepage-fade-in {
+    0%{
+        //transform: translateX(-100%);
+        opacity: 0;
+    }
+    60%{
+        //transform: translateX(0);
+        opacity: 0;
+    }
+    100%{opacity: 1;}
 }
 
 @keyframes kf-spinner-fade-out{
