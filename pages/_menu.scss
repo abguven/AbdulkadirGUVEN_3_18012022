@@ -41,6 +41,24 @@ $br-menu-body: 3rem;
         justify-content: center;
         padding: $pad-section;
     }
+    @include desktop {
+        &__header{
+            justify-content: flex-start;
+        }
+        &__title{
+            margin-right: $mg-default;
+        }
+        &__body{
+            background-color: white;
+        }
+        &__course-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__course{
+            width: 32%;
+        }
+    }
 
 }
 

@@ -6,22 +6,19 @@ $media-breakpoints:(
 
 @mixin mobile-only{
     @media screen  and (max-width: map-get($media-breakpoints,"medium")){
-        @content;
-        
+        @content;        
     }
 }
 
 
 @mixin medium{
     @media screen  and (min-width: map-get($media-breakpoints,"medium")){
-        @content;
-        
+        @content;        
     }
 }
 
 @mixin desktop{
     @media screen  and (min-width: map-get($media-breakpoints,"desktop")){
-        @content;
-        
+        @content;        
     }
 }

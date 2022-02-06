@@ -1,6 +1,9 @@
 $fz-logo: 2.5rem; // logo text size
+$fz-logo-desktop: $fz-logo*2;
+
 $fz-back-button: 1.5rem;
 $padding-header : 1rem;
+$padding-header-desktop: $padding-header*2;
 
 $width-back-button: $fz-back-button *2; 
 
@@ -29,6 +32,18 @@ $width-back-button: $fz-back-button *2;
         i{
             vertical-align: text-bottom;
         }
+    }
+    @include desktop{
+        padding: $padding-header-desktop;
+        &__logo{
+            font-size: $fz-logo-desktop;
+        }
+        &__back-button{
+            $fz-back-button: $fz-back-button*1.5; 
+            font-size: $fz-back-button;
+            padding-top: calc(($fz-back-button) / 2);
+        }
+
     }    
 }
 

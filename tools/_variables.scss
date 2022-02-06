@@ -10,12 +10,12 @@ $cc-text-color : black;
 $cc-footer-background: #353535;
 $cc-footer-text: white;
 
-
 // default padding and margin values
 // paddings
 $pv-default: 0rem;
 $ph-default: 1.5rem;
 $pad-section: 1.5rem;
+$pad-section-desktop: $pad-section *2; 
 
 $pad-box: 1.3rem;
 $pv-box: 0.5rem;

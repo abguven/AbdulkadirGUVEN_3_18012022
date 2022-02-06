@@ -3,6 +3,17 @@ $cc-hover: darken($cc-primary,15%);
 .restos{
     padding: $pad-section;
     background: $cc-secondary-background;
+    @include medium{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__title{
+            width: 100%;
+        }
+    }
+    @include desktop{
+        padding: $pad-section-desktop;
+    }
 }
 
 .restocard{
@@ -46,5 +57,9 @@ $cc-hover: darken($cc-primary,15%);
     &__like-btn{
         @include like-btn;
     }
+    @include medium{
+        width: 48%;
+    }
+
 
 } // .restocard

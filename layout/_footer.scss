@@ -24,6 +24,21 @@ $fz-footer-caption: 90%;
     &__icon{
         width: 2.5rem;
     }
+    @include desktop{
+        padding: $pad-section-desktop;
+        &__title{
+            text-align: center;
+        }
+        &__list{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__link{
+            text-align: center;
+        }
+    }
+
+    
  
 
 }

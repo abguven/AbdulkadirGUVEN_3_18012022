@@ -46,6 +46,21 @@ $fz-icon: 2rem;
         font-weight: bold;
         margin-left: $mg-default;
     }
+    @include desktop{
+        display: flex;
+        padding: $pad-section-desktop;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__title{
+            width: 100%;
+            text-align: center;
+        }
+        &__item{
+            margin: $mg-default 0;
+            width: 30%;
+        }
+    }
+
  
 }
 

@@ -4,7 +4,8 @@
   "description": "OC-Projet 3: Dynamisez une page web avec des animations CSS",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch main.scss:public/css/style.css"
+    "sass": "sass --watch main.scss:public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "keywords": [],
   "author": "Abdulkadir GUVEN <abguven@gmail.com>",
