@@ -1,3 +1,17 @@
+// In naming variables following prefixes are used 
+// cc => color code
+// sz => size
+// mg => margin
+// fz => font size
+// pv => vertical padding
+// ph => horizontal padding
+// mg => margin
+// mh => horizontal margin
+// mv => vertical margin
+// br => border radius
+// tm => time
+// bw => border width
+
 // Color codes
 $cc-primary: #9356DC;
 $cc-secondary: #FF79DA;
@@ -10,6 +24,12 @@ $cc-text-color : black;
 $cc-footer-background: #353535;
 $cc-footer-text: white;
 
+//helper section
+$cc-helper-icon: #7e7e7e;
+
+//restocard section
+$cc-restocard-hover: darken($cc-primary,15%);
+
 // default padding and margin values
 // paddings
 $pv-default: 0rem;
@@ -21,8 +41,13 @@ $pad-box: 1.3rem;
 $pv-box: 0.5rem;
 $ph-box: 1.4rem;
 
+// header paddings
+$padding-header : 1rem;
+$padding-header-desktop: $padding-header*2;
+
 // margins
 $mg-default: 2rem;
+
 // Common margin used for texts in the body
 $mg-body-text: 0.5rem 0;
 $mv-body-text: 0.5rem;
@@ -31,32 +56,50 @@ $mv-body-text: 0.5rem;
 // Border radius
 $br-item: 1.5rem; 
 $br-card: 1.3rem;
-
+$br-menu-body: 3rem;
 
 // Default transparency level
 $transparency: 0.2;
 
-
 // Card Image
 $sz-default-image-height: 15rem;
 
+// Button properties
+$br-button: 10rem;
+
+// Opacity levels of box shadow
+$op-button-shadow-default: 0.2;
+$button-lighten-on-hover: 5;
+
+
+// Animation times
+$tm-menu-item-hover : 400ms; //transition time 
+$tm-menu-item-fadein: 300ms;
+$tm-menu-item-delay: calc($tm-menu-item-fadein / 1.6);
+
+$tm-button-hover: 300ms;
+
+$tm-spinner: 1.1s;
+$tm-spinner-text: calc($tm-spinner/2);
+$tm-fade: $tm-spinner + 700ms;
 
 // Spinner
 $cc-spinner-text: lighten($cc-text-color,15);
 
 // Color list used for spinner circles
-$lst-spinner-circle-colors:
-        $cc-primary-background,$cc-secondary,
-        $cc-primary, $cc-primary-background,
-        darken($cc-tertiary,10),$cc-primary-background;
+$lst-spinner-circle-colors:     
+                $cc-primary-background, // arc1
+                $cc-secondary,          // arc2
+                $cc-primary,            // arc3
+                $cc-primary-background, // arc4
+                darken($cc-tertiary,10),// arc5
+                $cc-primary-background; // arc6
 
-$nm-arc-count: 6; //  If exceed 6 update color list!! 
+$nm-arc-count: 6; //  If exceed 6 update color list!!
 $sz-spinner: 25vh;
-$bd-spinner-min: 1px;
-$bd-spinner-max: 5px;
-$tm-spinner: 1.1s;
-$tm-spinner-text: 600ms;
-$tm-fade: 1.8s;
+$bw-spinner-min: 1px;
+$bw-spinner-max: 5px;
 // How many arcs allowed in each level. You should not exceed 4!!!
-$max-arc-number: 2; 
+$max-arc-number: 2; // max 4 !!!
+// space between arcs
 $sz-spinner-space-between: calc($sz-spinner*0.05);

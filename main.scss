@@ -1,7 +1,6 @@
 @import "./tools/_variables.scss";
 
 // base folder
-//@import "./base/minireset";
 @import "./base/_normalize";
 @import "./base/typography";
 @import "./base/base";
@@ -16,6 +15,7 @@
 // components
 @import "./components/buttons";
 @import "./components/menu-item";
+@import "./components/spinner";
 
 // layouts
 @import "./layout/header";

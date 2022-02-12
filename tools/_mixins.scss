@@ -2,11 +2,34 @@
     box-shadow: 0.5rem 0.5rem 0.5rem rgba($color: $color, $alpha: $alpha);
 }
 
-@mixin heart-fill{
-    background: linear-gradient(0deg, $cc-secondary 15%, $cc-primary 95%);
-    background-clip: text;
-    color: transparent;
-    font-weight: 501; // > 500 to fill the heart  
+@mixin like-btn{
+    font-weight: 400;
+    position: relative;
+    &::after{
+        content: "\f004";
+        font-weight: 501; // fills the heart
+        position: absolute;
+        left:0; top: 0; right:0; left:0;
+        background: linear-gradient(0deg, $cc-secondary 15%, $cc-primary 95%);
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: opacity $tm-button-hover;
+    }
+    &:hover{
+        &::after{
+            @include desktop{
+            opacity: 1; // Fills the background
+            }
+        }
+    }
+    &:active{
+      &::after{
+        @include mobile-only{
+            opacity: 1; // Fills the background
+        }
+      }
+    }    
 }
 
 @mixin gradient-background($from-color:$cc-primary, $to-color:$cc-secondary){
@@ -59,21 +82,6 @@
     transform: translate(-50%,-50%);
 }
 
-@mixin like-btn{
-    font-weight: 400;
-    &:hover{
-        @include desktop{
-            @include heart-fill();
-        }
-    }
-    &:active{
-        @include mobile-only{
-            @include heart-fill();
-        }
-    }    
-}
-
-
 @mixin new-tag($margin:1rem) {
     display: block;
     position: absolute;
@@ -96,25 +104,44 @@
         width: $width;
     }
 }
+
 //spinner
+
+@mixin spinner-arcs($arc-count:6){
+    @for $i from 1 through $arc-count {
+        &__arc#{$i}{
+            @include spinner-arc($i,$lst-spinner-circle-colors);
+        }
+    }
+}
+
+// Creates arcs in the loading spinner
+// @index: index of the spinner arc  
+// @colors: list of colors for each arc
 
 @mixin spinner-arc($index, $colors){
     $level: ceil(calc($index/$max-arc-number))-1;
-    $delay: calc($tm-spinner/10)*$level;
+    $nm-level-count: calc($nm-arc-count/$max-arc-number);
+    @if $nm-level-count >= 10{
+        // Warning if more than 10 levels used.
+        @debug "In spinner you exceed 10 levels!!!";
+    }
+    $delay: calc($tm-spinner/($nm-level-count*3))*$level;
     $side: get-arc-side($index); // returns "top" "right" "bottom" or "left"
-    border-#{$side}-color: nth($colors,$index);    
+    border-#{$side}-color: nth($colors,$index); // set arc color
 
     @if $level > 0 {
         animation: kf-spinner-thin $tm-spinner $delay linear infinite both;
         left: $sz-spinner-space-between*$level;
         top: $sz-spinner-space-between*$level;
-        $size : 100% - $level*10;
+        $size : 100% - $level*10; // More than 10 level should not be used !!!
         width: $size;
         height: $size;    
         @if $level > 1 {
-            border-width: calc($bd-spinner-max/2);
+            border-width: calc($bw-spinner-max/2);
         }
     }@else{
+        // level 0 => outer circle => thicker border
         animation: kf-spinner-thick $tm-spinner $delay linear infinite both;
     }
 }

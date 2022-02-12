@@ -1,4 +1,4 @@
-@keyframes rotate-360{
+@keyframes kf-rotate-360{
     from {
         transform: rotate(0) translateX(0rem);
         //opacity: 1;  
@@ -10,7 +10,7 @@
 
 }
 
-@keyframes fadein {
+@keyframes kf-menu-item-fadein {
     0% {
         opacity: 0;
         transform: translateY(8px);
@@ -24,40 +24,35 @@
 
 // Loading spinner
 
-@keyframes loading-spinner {
-    from{opacity: 0;}
-}
-
-
 @keyframes kf-spinner-thick{
     0%{
         transform: rotate(0deg);
-        border-width: $bd-spinner-max;
+        border-width: $bw-spinner-max;
     }
     50%{
         transform: rotate(180deg);
-        border-width: $bd-spinner-min;
+        border-width: $bw-spinner-min;
     }
 
     100%{
         transform: rotate(360deg);
-        border-width: $bd-spinner-max;
+        border-width: $bw-spinner-max;
     }    
 }
 
 @keyframes kf-spinner-thin{
     0%{
         transform: rotate(0deg);
-        border-width: $bd-spinner-min;
+        border-width: $bw-spinner-min;
     }
     50%{
         transform: rotate(180deg);
-        border-width: calc($bd-spinner-max/2);
+        border-width: calc($bw-spinner-max/2);
     }
 
     100%{
         transform: rotate(360deg);
-        border-width: $bd-spinner-min;
+        border-width: $bw-spinner-min;
     }    
 
 }
@@ -93,11 +88,9 @@
 
 @keyframes kf-homepage-fade-in {
     0%{
-        //transform: translateX(-100%);
         opacity: 0;
     }
     60%{
-        //transform: translateX(0);
         opacity: 0;
     }
     100%{opacity: 1;}

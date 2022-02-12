@@ -1,6 +1,5 @@
 $sz-item-order: 2rem;
-$cc-icon: #7e7e7e;
-$fz-icon: 2rem;
+
 
 .helper{
     $self: &;
@@ -24,7 +23,7 @@ $fz-icon: 2rem;
         position: absolute;
         left: calc($sz-item-order/-2);
         // vertical centering
-        top: calc(calc($pad-box * 2 + $fz-icon) / 2) - calc($sz-item-order/2);
+        top: calc(calc($pad-box * 2 + $fz-helper-icon) / 2) - calc($sz-item-order/2);
         padding-left: 0.6rem;
         padding-top: 0.3rem;
         font-size: 80%;
@@ -36,8 +35,8 @@ $fz-icon: 2rem;
     }
     &__icon{
         margin-left: $mg-default;
-        color: $cc-icon;        
-        font-size: $fz-icon;
+        color: $cc-helper-icon;        
+        font-size: $fz-helper-icon;
         .fas{
             vertical-align: top;
         }

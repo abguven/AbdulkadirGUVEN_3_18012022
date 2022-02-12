@@ -1,11 +1,3 @@
-// Button properties
-$br-button: 10rem;
-
-// Opacity levels of box shadow
-$op-button-shadow-default: 0.2;
-$button-lighten-on-hover: 5;
-$tm-button-hover: 300ms;
-
 .search__btn{
     @include gradient-button;
 }
