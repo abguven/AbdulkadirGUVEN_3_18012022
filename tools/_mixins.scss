@@ -4,6 +4,7 @@
 
 @mixin like-btn{
     font-weight: 400;
+    font-size: $fz-like-btn;
     position: relative;
     &::after{
         content: "\f004";

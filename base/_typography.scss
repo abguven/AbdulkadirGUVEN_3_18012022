@@ -8,7 +8,6 @@
 $fz-h1: 2.5rem;
 $fz-h2: 1.7rem;
 $fz-h3: 1.6rem;
-
 $fz-default : 1.6rem;
 
 body{
@@ -37,22 +36,26 @@ p{
     font-size: $fz-default;
 }
 
+// Relative font sizes
 $fz-default-box-title: $fz-h2;
 $fz-default-box-caption : $fz-default;
 
-// Header
-$fz-logo: 2.5rem; // logo text size
-$fz-logo-desktop: $fz-logo*2;
-$fz-back-button: 1.5rem;
+    // Header
+    $fz-logo: 2.5rem; // logo text size
+    $fz-logo-desktop: $fz-logo*2;
+    $fz-back-button: 1.5rem;
 
 
-// Menu
-$fz-menu-header : 2rem;
-$fz-menu-item-text: 85%;
+    // Menu
+    $fz-menu-header : 2rem;
+    $fz-menu-item-text: 85%;
 
-// Helper section
-$fz-helper-icon: 2rem;
+    // Helper section
+    $fz-helper-icon: 2rem;
 
-// Footer
-$fz-footer-title: 120%;
-$fz-footer-caption: 90%;
+    // Footer
+    $fz-footer-title: 120%;
+    $fz-footer-caption: 90%;
+    
+    // Icons
+    $fz-like-btn: 2rem;
